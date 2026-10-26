@@ -1,0 +1,296 @@
+
+> valen-learning@3.0.0 test
+> node --test backend/tests/*.test.js
+
+TAP version 13
+# Subtest: IA non configuree : jeux disponibles, aucun appel reseau, etat explicite
+ok 1 - IA non configuree : jeux disponibles, aucun appel reseau, etat explicite
+  ---
+  duration_ms: 476.245538
+  type: 'test'
+  ...
+# Subtest: cle cote serveur, Responses strict, store:false, ajout CSV et relecture
+ok 2 - cle cote serveur, Responses strict, store:false, ajout CSV et relecture
+  ---
+  duration_ms: 853.140615
+  type: 'test'
+  ...
+# Subtest: idempotence : un meme clic ne facture pas un second appel
+ok 3 - idempotence : un meme clic ne facture pas un second appel
+  ---
+  duration_ms: 488.132485
+  type: 'test'
+  ...
+# Subtest: budget persistant commun aux appareils et aux redemarrages
+ok 4 - budget persistant commun aux appareils et aux redemarrages
+  ---
+  duration_ms: 888.681361
+  type: 'test'
+  ...
+# Subtest: concurrence PC/telephone : une seule generation a la fois
+ok 5 - concurrence PC/telephone : une seule generation a la fois
+  ---
+  duration_ms: 565.806695
+  type: 'test'
+  ...
+# Subtest: authentification : aucun appel IA avant verification du mot de passe
+ok 6 - authentification : aucun appel IA avant verification du mot de passe
+  ---
+  duration_ms: 474.027367
+  type: 'test'
+  ...
+# Subtest: origine et taille : la generation ne peut pas etre declenchee depuis un autre site
+ok 7 - origine et taille : la generation ne peut pas etre declenchee depuis un autre site
+  ---
+  duration_ms: 47.664168
+  type: 'test'
+  ...
+# Subtest: lecon : 5 QCM, reponse verifiee sur le serveur, reprise depuis un autre appareil
+ok 8 - lecon : 5 QCM, reponse verifiee sur le serveur, reprise depuis un autre appareil
+  ---
+  duration_ms: 567.356497
+  type: 'test'
+  ...
+# Subtest: correction : texte et explication sauvegardes dans des CSV plats
+ok 9 - correction : texte et explication sauvegardes dans des CSV plats
+  ---
+  duration_ms: 325.028805
+  type: 'test'
+  ...
+# Subtest: CSV : formules neutralisees et retours a la ligne preserves
+ok 10 - CSV : formules neutralisees et retours a la ligne preserves
+  ---
+  duration_ms: 387.971518
+  type: 'test'
+  ...
+# Subtest: Echec cle refusee : ne modifie pas le carnet, conserve le quota
+ok 11 - Echec cle refusee : ne modifie pas le carnet, conserve le quota
+  ---
+  duration_ms: 345.758918
+  type: 'test'
+  ...
+# Subtest: Echec quota OpenAI : ne modifie pas le carnet, conserve le quota
+ok 12 - Echec quota OpenAI : ne modifie pas le carnet, conserve le quota
+  ---
+  duration_ms: 527.084838
+  type: 'test'
+  ...
+# Subtest: Echec modele indisponible : ne modifie pas le carnet, conserve le quota
+ok 13 - Echec modele indisponible : ne modifie pas le carnet, conserve le quota
+  ---
+  duration_ms: 369.952637
+  type: 'test'
+  ...
+# Subtest: Echec contenu JSON invalide : ne modifie pas le carnet, conserve le quota
+ok 14 - Echec contenu JSON invalide : ne modifie pas le carnet, conserve le quota
+  ---
+  duration_ms: 392.133709
+  type: 'test'
+  ...
+# Subtest: Echec sortie tronquee : ne modifie pas le carnet, conserve le quota
+ok 15 - Echec sortie tronquee : ne modifie pas le carnet, conserve le quota
+  ---
+  duration_ms: 381.867195
+  type: 'test'
+  ...
+# Subtest: Echec refus de contenu : ne modifie pas le carnet, conserve le quota
+ok 16 - Echec refus de contenu : ne modifie pas le carnet, conserve le quota
+  ---
+  duration_ms: 262.944309
+  type: 'test'
+  ...
+# Subtest: Echec reseau indisponible : ne modifie pas le carnet, conserve le quota
+ok 17 - Echec reseau indisponible : ne modifie pas le carnet, conserve le quota
+  ---
+  duration_ms: 411.525949
+  type: 'test'
+  ...
+# Subtest: choix identiques dans un QCM : la lecon est refusee integralement
+ok 18 - choix identiques dans un QCM : la lecon est refusee integralement
+  ---
+  duration_ms: 404.564525
+  type: 'test'
+  ...
+# Subtest: vocabulaire transmis uniquement sur demande explicite
+ok 19 - vocabulaire transmis uniquement sur demande explicite
+  ---
+  duration_ms: 385.78567
+  type: 'test'
+  ...
+# Subtest: migration ancienne version : conserve mots, revisions et objectif
+ok 20 - migration ancienne version : conserve mots, revisions et objectif
+  ---
+  duration_ms: 279.188007
+  type: 'test'
+  ...
+# Subtest: un seul CSV apprentissage manquant : aucune reinitialisation silencieuse
+ok 21 - un seul CSV apprentissage manquant : aucune reinitialisation silencieuse
+  ---
+  duration_ms: 78.331248
+  type: 'test'
+  ...
+# Subtest: export securise : liste blanche des CSV, ni .env ni chemins arbitraires
+ok 22 - export securise : liste blanche des CSV, ni .env ni chemins arbitraires
+  ---
+  duration_ms: 127.704509
+  type: 'test'
+  ...
+# Subtest: interruption pendant un ajout IA : reprise de tous les CSV coherente
+ok 23 - interruption pendant un ajout IA : reprise de tous les CSV coherente
+  ---
+  duration_ms: 695.13889
+  type: 'test'
+  ...
+# Subtest: apercu sans ecriture, import vocabulaire, rattachement et doublons
+ok 24 - apercu sans ecriture, import vocabulaire, rattachement et doublons
+  ---
+  duration_ms: 650.205372
+  type: 'test'
+  ...
+# Subtest: import preserve une progression existante et un favori
+ok 25 - import preserve une progression existante et un favori
+  ---
+  duration_ms: 702.335669
+  type: 'test'
+  ...
+# Subtest: grammaire : alias francais, exemples, suivi, restart et export
+ok 26 - grammaire : alias francais, exemples, suivi, restart et export
+  ---
+  duration_ms: 573.340905
+  type: 'test'
+  ...
+# Subtest: toutes les lignes sont validees : aucun import partiel sur erreur
+ok 27 - toutes les lignes sont validees : aucun import partiel sur erreur
+  ---
+  duration_ms: 228.100793
+  type: 'test'
+  ...
+# Subtest: refus de mauvais type, colonnes dupliquees, entree vide et fichier trop grand
+ok 28 - refus de mauvais type, colonnes dupliquees, entree vide et fichier trop grand
+  ---
+  duration_ms: 183.613099
+  type: 'test'
+  ...
+# Subtest: BOM, tabulations, guillemets, accents et cellules multilignes
+ok 29 - BOM, tabulations, guillemets, accents et cellules multilignes
+  ---
+  duration_ms: 234.177887
+  type: 'test'
+  ...
+# Subtest: exports neutralisent les formules et se reimportent sans apostrophe ajoutee
+ok 30 - exports neutralisent les formules et se reimportent sans apostrophe ajoutee
+  ---
+  duration_ms: 330.415586
+  type: 'test'
+  ...
+# Subtest: migration des huit CSV precedents sans perte de contenu
+ok 31 - migration des huit CSV precedents sans perte de contenu
+  ---
+  duration_ms: 455.382144
+  type: 'test'
+  ...
+# Subtest: un seul fichier nouveau absent ne provoque pas de reinitialisation
+ok 32 - un seul fichier nouveau absent ne provoque pas de reinitialisation
+  ---
+  duration_ms: 178.804316
+  type: 'test'
+  ...
+# Subtest: lecture du dossier : doublons, erreurs isolees et liens refuses
+ok 33 - lecture du dossier : doublons, erreurs isolees et liens refuses
+  ---
+  duration_ms: 584.778246
+  type: 'test'
+  ...
+# Subtest: imports simultanes : aucun doublon et aucun resultat perdu
+ok 34 - imports simultanes : aucun doublon et aucun resultat perdu
+  ---
+  duration_ms: 483.671375
+  type: 'test'
+  ...
+# Subtest: suppression d un mot : collection toujours lisible
+ok 35 - suppression d un mot : collection toujours lisible
+  ---
+  duration_ms: 388.708591
+  type: 'test'
+  ...
+# Subtest: reprise transactionnelle apres interruption pendant un import
+ok 36 - reprise transactionnelle apres interruption pendant un import
+  ---
+  duration_ms: 401.667057
+  type: 'test'
+  ...
+# Subtest: API : authentification, origine, modeles, import et exports
+ok 37 - API : authentification, origine, modeles, import et exports
+  ---
+  duration_ms: 975.592424
+  type: 'test'
+  ...
+# Subtest: sauvegarde CSV, révisions, paramètres et redémarrage
+ok 38 - sauvegarde CSV, révisions, paramètres et redémarrage
+  ---
+  duration_ms: 1289.768763
+  type: 'test'
+  ...
+# Subtest: concurrence PC/téléphone et révision idempotente
+ok 39 - concurrence PC/téléphone et révision idempotente
+  ---
+  duration_ms: 3658.616403
+  type: 'test'
+  ...
+# Subtest: import legacy atomique avec historique aplati et sauvegarde ZIP complète
+ok 40 - import legacy atomique avec historique aplati et sauvegarde ZIP complète
+  ---
+  duration_ms: 360.533704
+  type: 'test'
+  ...
+# Subtest: initialisation depuis le vrai format legacy préserve toutes les révisions
+ok 41 - initialisation depuis le vrai format legacy préserve toutes les révisions
+  ---
+  duration_ms: 208.421085
+  type: 'test'
+  ...
+# Subtest: une collection vidée reste vide au redémarrage
+ok 42 - une collection vidée reste vide au redémarrage
+  ---
+  duration_ms: 525.197906
+  type: 'test'
+  ...
+# Subtest: authentification, origine, statique et limites des demandes
+ok 43 - authentification, origine, statique et limites des demandes
+  ---
+  duration_ms: 697.213014
+  type: 'test'
+  ...
+# Subtest: CSV corrompu ou fichier manquant : refus sans réinitialisation
+ok 44 - CSV corrompu ou fichier manquant : refus sans réinitialisation
+  ---
+  duration_ms: 171.180663
+  type: 'test'
+  ...
+# Subtest: reprise cohérente après interruption entre deux renommages
+ok 45 - reprise cohérente après interruption entre deux renommages
+  ---
+  duration_ms: 323.012231
+  type: 'test'
+  ...
+# Subtest: journal de reprise invalide : aucun remplacement supplémentaire
+ok 46 - journal de reprise invalide : aucun remplacement supplémentaire
+  ---
+  duration_ms: 137.06542
+  type: 'test'
+  ...
+# Subtest: limite de 5 000 mots et historique de 1 000 événements
+ok 47 - limite de 5 000 mots et historique de 1 000 événements
+  ---
+  duration_ms: 595.230858
+  type: 'test'
+  ...
+1..47
+# tests 47
+# suites 0
+# pass 47
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 10311.108566

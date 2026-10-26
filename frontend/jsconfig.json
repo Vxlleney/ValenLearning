@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "@/*": ["./src/*"], "@shared/*": ["../shared/*"] }
+  },
+  "include": ["src", "../shared", "vite.config.js"]
+}

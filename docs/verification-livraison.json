@@ -1,0 +1,13 @@
+{
+  "words": 70,
+  "reviewEvents": 32,
+  "lessons": 14,
+  "csvCollections": 7,
+  "completeViews": 2,
+  "csvFiles": 11,
+  "folderScan": "7 unchanged",
+  "httpSnapshot": "passed",
+  "frontendBuild": "not executed",
+  "docker": "not executed",
+  "openaiRealCall": "not executed"
+}

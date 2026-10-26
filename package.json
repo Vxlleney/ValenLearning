@@ -1,0 +1,22 @@
+{
+  "name": "valen-learning",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12 <25"
+  },
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "node --watch backend/index.js",
+    "build": "npm run build --workspace frontend",
+    "start": "node backend/index.js",
+    "test": "node --test backend/tests/*.test.js",
+    "test:live": "node scripts/test-openai.mjs --confirm-cost",
+    "check": "node scripts/check.mjs"
+  }
+}
